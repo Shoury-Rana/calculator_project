@@ -15,7 +15,7 @@ body {
     width: 200px;
 }
 
-input#display {
+#display {
     width: 90%;
     padding: 10px;
     font-size: 18px;
@@ -33,48 +33,4 @@ button {
     padding: 10px;
     font-size: 18px;
     cursor: pointer;
-}
-
-.dropdown {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-}
-
-.dropbtn {
-    background-color: #4CAF50;
-    color: white;
-    padding: 10px;
-    font-size: 18px;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-}
-
-.dropdown-content {
-    display: none;
-    position: absolute;
-    left: 0;
-    top: 45px;
-    background-color: #f9f9f9;
-    min-width: 150px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-    border-radius: 5px;
-}
-
-.dropdown-content a {
-    color: black;
-    padding: 10px;
-    text-decoration: none;
-    display: block;
-    border-bottom: 1px solid #ddd;
-}
-
-.dropdown-content a:hover {
-    background-color: #f1f1f1;
-}
-
-.show {
-    display: block;
 }

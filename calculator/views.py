@@ -3,6 +3,7 @@ from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
 from django.http import JsonResponse
 import json
+import math
 
 def index(request):
     return render(request, 'calculator/index.html')
@@ -14,7 +15,9 @@ def calculate(request):
         try:
             data = json.loads(request.body)
             expression = data.get('expression')
-            print(expression)
+            functions = ['sin', 'cos', 'tan', 'log', 'sqrt']
+            for func in functions:
+                expression = expression.replace(func, f'math.{func}')
             result = eval(expression)
             return JsonResponse({'result': result})
         except Exception as e:
