@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% load static %}
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="{% static 'calculator/script.js' %}"></script>
+    <link rel="stylesheet" href="{% static 'calculator/style.css' %}">
+    <title>
+        {% block title %}
+        {% endblock title%}
+    </title>
+</head>
+<body>
+    <div class="dropdown">
+        <button onclick="toggleDropdown()" class="dropbtn">☰</button>
+        <div id="dropdown-content" class="dropdown-content">
+            <a href={%url 'sci_cal'%}>scientific calculator</a>
+            <a href="#">Option 2</a>
+            <a href="#">Option 3</a>
+        </div>
+    </div>
+    {% block body %}
+    {% endblock body %}
+</body>
+</html>
